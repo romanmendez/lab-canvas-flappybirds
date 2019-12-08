@@ -5,7 +5,7 @@ class Player {
     this.height = height;
 
     this.image = new Image();
-    this.image.src = "../images/flappy.png";
+    this.image.src = "../images/bird.png";
 
     this.posX = 50;
     this.posY = gameHeight * 0.98 - this.height;
