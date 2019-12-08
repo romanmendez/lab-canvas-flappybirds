@@ -1,5 +1,5 @@
 class Player {
-  constructor(ctx, width, height, gameWidth, gameHeight, keys) {
+  constructor(ctx, width, height, gameWidth, gameHeight) {
     this.ctx = ctx;
     this.width = width;
     this.height = height;
@@ -17,7 +17,6 @@ class Player {
     this.frames = 3;
     this.framesIndex = 0;
 
-    this.keys = keys;
     this.setListeners();
   }
 
@@ -48,8 +47,8 @@ class Player {
   }
 
   setListeners() {
-    this.ctx.addEventListener("click", () => {
-      this.posY += 10;
+    this.ctx.addEventListener("keydown", e => {
+      if (e.keyCode === 32) this.posY += 10;
     });
   }
 }
